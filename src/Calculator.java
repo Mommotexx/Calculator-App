@@ -17,9 +17,8 @@ public class Calculator implements ActionListener{
 	double num1 =0,num2=0,result=0;
 	char operator;
 	
-	
+	/*Calculator constructor.*/
 	Calculator() {
-		
 		frame = new JFrame("Calculator");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(420, 550);
@@ -90,14 +89,13 @@ public class Calculator implements ActionListener{
 		frame.add(clrButton);
 		frame.add(textfield);
 		frame.setVisible(true);
-		
 	}
 	public static void main(String[] args) {
+		/*Initiates calculator*/
 		Calculator calc = new Calculator();
-		
-
 	}
 	
+	/*Event listeners*/
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
@@ -154,6 +152,7 @@ public class Calculator implements ActionListener{
 			textfield.setText(String.valueOf(result));
 			num1=result;
 		}
+		
 		if(e.getSource() ==clrButton) {
 			textfield.setText("");
 		}
